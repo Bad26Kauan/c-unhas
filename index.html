@@ -4,26 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C Unhas - Nail Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #f59e0b, #eab308);
-            color: white;
+        .gradient-bg {
+            background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
             text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.2rem;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
         }
     </style>
 </head>
-<body>
-    <h1>🎉 C Unhas - Nail Designer</h1>
-    <p>Beleza e cuidado em cada detalhe ✨</p>
-    <p>Site em construção...</p>
+<body class="bg-white text-gray-800">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5588999981878?text=Olá! Gostaria de agendar um horário." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Hero -->
+    <section class="gradient-bg text-white py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">C Unhas - Nail Designer</h1>
+            <p class="text-lg mb-8">Beleza e cuidado em cada detalhe ✨</p>
+            <button class="bg-white text-yellow-600 font-bold px-6 py-3 rounded-full shadow-lg">
+                Agende seu horário
+            </button>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="py-16 max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Sobre Mim</h2>
+        <p class="text-lg">
+            Designer de unhas especializada em cuidados com mãos e pés, alongamentos
+            e esmaltação artística.
+        </p>
+    </section>
+
+    <!-- Serviços -->
+    <section class="py-16 bg-gray-50">
+        <h2 class="text-3xl font-bold mb-10 text-center">Serviços</h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
+            <div class="bg-white p-6 rounded-2xl shadow-lg">
+                <h3 class="text-xl font-semibold mb-2">Mãos e Pés</h3>
+                <p class="text-gray-600 mb-4">Manicure e pedicure completos.</p>
+                <p class="font-bold text-yellow-600">A partir de R$ 20,00</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-lg">
+                <h3 class="text-xl font-semibold mb-2">Esmaltação</h3>
+                <p class="text-gray-600 mb-4">Esmaltação artística em gel.</p>
+                <p class="font-bold text-yellow-600">A partir de R$ 40,00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="py-16 text-center">
+        <h2 class="text-3xl font-bold mb-6">Agende seu Horário</h2>
+        <a href="https://wa.me/5588999981878" target="_blank">
+            <button class="bg-yellow-500 text-white font-bold px-6 py-3 rounded-full shadow-lg">
+                WhatsApp: (88) 9998-1878
+            </button>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8 text-center">
+        <p>© 2024 C Unhas - Nail Designer</p>
+    </footer>
 </body>
 </html>
