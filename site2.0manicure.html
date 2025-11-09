@@ -4,28 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C Unhas - Nail Designer</title>
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-        }
         .gradient-bg {
-            background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%) !important;
-        }
-        .card-hover {
-            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);
         }
         .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
         }
         .whatsapp-float {
             position: fixed;
@@ -51,25 +38,38 @@
             50% { transform: scale(1.1); }
             100% { transform: scale(1); }
         }
-        .service-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            transform: scale(1.02);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+        }
+        
+        /* Estilos da Galeria */
+        .gallery-item {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
     </style>
 </head>
-<body class="bg-white text-gray-800 min-h-screen">
+<body class="bg-white text-gray-800">
     <!-- Botão do WhatsApp Flutuante -->
-    <a href="https://wa.me/5588999981878?text=Olá! Gostaria de agendar um horário." class="whatsapp-float" target="_blank" aria-label="Contato WhatsApp">
+    <a href="https://wa.me/5588999981878?text=Olá! Gostaria de agendar um horário." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Hero Section -->
     <section class="gradient-bg text-white py-20 text-center">
         <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-pulse">C Unhas - Nail Designer</h1>
-            <p class="text-xl md:text-2xl mb-8 opacity-90">Beleza e cuidado em cada detalhe ✨</p>
-            <a href="#agendamento" class="inline-block">
-                <button class="bg-white text-yellow-600 font-bold px-8 py-4 rounded-full shadow-2xl hover:bg-gray-100 transition duration-300 transform hover:scale-105 text-lg">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">C Unhas - Nail Designer</h1>
+            <p class="text-xl md:text-2xl mb-8">Beleza e cuidado em cada detalhe ✨</p>
+            <a href="#agendamento">
+                <button class="bg-white text-yellow-600 font-bold px-8 py-4 rounded-full shadow-2xl hover:bg-gray-100 transition duration-300 text-lg transform hover:scale-105">
                     Agende seu horário
                 </button>
             </a>
@@ -100,12 +100,12 @@
                 <!-- Mãos e Pés -->
                 <div class="bg-white rounded-2xl shadow-xl card-hover overflow-hidden">
                     <div class="p-6 text-center">
-                        <div class="service-icon text-yellow-500">
+                        <div class="text-6xl text-yellow-500 mb-4">
                             <i class="fas fa-hand-sparkles"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Mãos e Pés</h3>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            Serviços completos de manicure e pedicure com opções decoradas e clássicas.
+                            Serviços completos de manicure e pedicure.
                         </p>
                         <div class="text-yellow-600 font-bold text-xl">
                             A partir de R$ 20,00
@@ -116,12 +116,12 @@
                 <!-- Esmaltação -->
                 <div class="bg-white rounded-2xl shadow-xl card-hover overflow-hidden">
                     <div class="p-6 text-center">
-                        <div class="service-icon text-pink-500">
+                        <div class="text-6xl text-pink-500 mb-4">
                             <i class="fas fa-paint-brush"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Esmaltação</h3>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            Esmaltação artística e delicada, com acabamento em gel ou tradicional.
+                            Esmaltação artística em gel ou tradicional.
                         </p>
                         <div class="text-yellow-600 font-bold text-xl">
                             A partir de R$ 40,00
@@ -132,12 +132,12 @@
                 <!-- Alongamento -->
                 <div class="bg-white rounded-2xl shadow-xl card-hover overflow-hidden">
                     <div class="p-6 text-center">
-                        <div class="service-icon text-purple-500">
+                        <div class="text-6xl text-purple-500 mb-4">
                             <i class="fas fa-ruler-vertical"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Alongamento</h3>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            Alongamento em gel e unhas postiças para o formato perfeito que você deseja.
+                            Alongamento em gel para formato perfeito.
                         </p>
                         <div class="text-yellow-600 font-bold text-xl">
                             A partir de R$ 45,00
@@ -148,12 +148,12 @@
                 <!-- Manutenção -->
                 <div class="bg-white rounded-2xl shadow-xl card-hover overflow-hidden">
                     <div class="p-6 text-center">
-                        <div class="service-icon text-blue-500">
+                        <div class="text-6xl text-blue-500 mb-4">
                             <i class="fas fa-tools"></i>
                         </div>
                         <h3 class="text-2xl font-bold mb-4 text-gray-800">Manutenção</h3>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            Manutenção especializada, reposição e remoção com segurança e cuidado.
+                            Manutenção e reposição com segurança.
                         </p>
                         <div class="text-yellow-600 font-bold text-xl">
                             A partir de R$ 20,00
@@ -164,48 +164,157 @@
         </div>
     </section>
 
-    <!-- Galeria -->
+    <!-- GALERIA DE TRABALHOS -->
     <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 text-center text-gray-800">Galeria de Trabalhos</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
-                    <span class="text-yellow-600 font-semibold">📸 Foto 1</span>
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Galeria de Trabalhos</h2>
+                <p class="text-xl text-gray-600">Confira alguns dos meus trabalhos realizados</p>
+            </div>
+
+            <!-- Grid da Galeria -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Espaços para fotos - Placeholders elegantes -->
+                <div class="gallery-item bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-camera text-3xl text-yellow-500 opacity-60"></i>
                 </div>
-                <div class="bg-gradient-to-br from-pink-100 to-pink-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
-                    <span class="text-pink-600 font-semibold">💅 Foto 2</span>
+
+                <div class="gallery-item bg-gradient-to-br from-pink-100 to-pink-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-camera text-3xl text-pink-500 opacity-60"></i>
                 </div>
-                <div class="bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
-                    <span class="text-purple-600 font-semibold">✨ Foto 3</span>
+
+                <div class="gallery-item bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-camera text-3xl text-purple-500 opacity-60"></i>
                 </div>
-                <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
-                    <span class="text-blue-600 font-semibold">🎨 Foto 4</span>
+
+                <div class="gallery-item bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-camera text-3xl text-blue-500 opacity-60"></i>
+                </div>
+
+                <div class="gallery-item bg-gradient-to-br from-green-100 to-green-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-camera text-3xl text-green-500 opacity-60"></i>
+                </div>
+
+                <div class="gallery-item bg-gradient-to-br from-red-100 to-red-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-camera text-3xl text-red-500 opacity-60"></i>
+                </div>
+
+                <div class="gallery-item bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-camera text-3xl text-indigo-500 opacity-60"></i>
+                </div>
+
+                <div class="gallery-item bg-gradient-to-br from-teal-100 to-teal-200 rounded-xl h-48 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-camera text-3xl text-teal-500 opacity-60"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contato -->
-    <section id="agendamento" class="py-16 bg-gradient-to-r from-yellow-400 to-yellow-500">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-6 text-white">Agende seu Horário</h2>
-            <p class="text-xl mb-8 text-white opacity-90">Entre em contato pelo WhatsApp e garanta já sua vaga!</p>
-            
-            <a href="https://wa.me/5588999981878?text=Olá! Gostaria de agendar um horário." target="_blank" class="inline-block mb-12">
-                <button class="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 text-lg">
-                    <i class="fab fa-whatsapp mr-3"></i> WhatsApp: (88) 9998-1878
-                </button>
-            </a>
-            
-            <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-2xl mx-auto">
-                <h3 class="text-2xl font-bold mb-6 text-gray-800">Ou preencha o formulário:</h3>
-                <form class="space-y-6">
-                    <input type="text" placeholder="Seu nome completo" class="w-full px-4 py-3 border-2 border-yellow-200 rounded-xl focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition duration-200">
-                    <input type="tel" placeholder="Seu WhatsApp" class="w-full px-4 py-3 border-2 border-yellow-200 rounded-xl focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition duration-200">
-                    <textarea placeholder="Descreva o serviço desejado e data preferencial" class="w-full px-4 py-3 border-2 border-yellow-200 rounded-xl focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200 transition duration-200 h-32"></textarea>
-                    <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold px-6 py-4 rounded-xl shadow-lg transition duration-300 transform hover:scale-105 text-lg">
-                        📅 Solicitar Agendamento
-                    </button>
+    <!-- SISTEMA DE AGENDAMENTO -->
+    <section id="agendamento" class="py-16 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Agende seu Horário</h2>
+                <p class="text-xl text-gray-600">Escolha o serviço, data e horário preferidos</p>
+            </div>
+
+            <!-- Formulário de Agendamento -->
+            <div class="bg-white rounded-3xl shadow-2xl p-8">
+                <form id="agendamentoForm" class="space-y-6">
+                    <!-- Dados Pessoais -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-user text-yellow-500 mr-2"></i>Seu Nome Completo
+                            </label>
+                            <input type="text" 
+                                   id="nomeCliente" 
+                                   required 
+                                   class="w-full px-4 py-3 border-2 border-yellow-200 rounded-xl form-input focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200"
+                                   placeholder="Digite seu nome">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-phone text-yellow-500 mr-2"></i>Seu WhatsApp
+                            </label>
+                            <input type="tel" 
+                                   id="whatsappCliente" 
+                                   required 
+                                   class="w-full px-4 py-3 border-2 border-yellow-200 rounded-xl form-input focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200"
+                                   placeholder="(88) 99999-9999">
+                        </div>
+                    </div>
+
+                    <!-- Serviço -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-spa text-yellow-500 mr-2"></i>Serviço Desejado
+                        </label>
+                        <select id="servico" 
+                                required 
+                                class="w-full px-4 py-3 border-2 border-yellow-200 rounded-xl form-input focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200">
+                            <option value="">Selecione um serviço</option>
+                            <option value="Manicure - R$ 20,00">💅 Manicure - R$ 20,00</option>
+                            <option value="Pedicure - R$ 25,00">🦶 Pedicure - R$ 25,00</option>
+                            <option value="Alongamento em Gel - R$ 45,00">✨ Alongamento em Gel - R$ 45,00</option>
+                            <option value="Manutenção - R$ 20,00">🔧 Manutenção - R$ 20,00</option>
+                            <option value="Esmaltação Artística - R$ 40,00">🎨 Esmaltação Artística - R$ 40,00</option>
+                            <option value="Pacote Completo - R$ 60,00">🌟 Pacote Completo - R$ 60,00</option>
+                        </select>
+                    </div>
+
+                    <!-- Data e Horário -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-calendar text-yellow-500 mr-2"></i>Data Preferida
+                            </label>
+                            <input type="date" 
+                                   id="dataAgendamento" 
+                                   required 
+                                   class="w-full px-4 py-3 border-2 border-yellow-200 rounded-xl form-input focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-clock text-yellow-500 mr-2"></i>Horário Preferido
+                            </label>
+                            <select id="horarioAgendamento" 
+                                    required 
+                                    class="w-full px-4 py-3 border-2 border-yellow-200 rounded-xl form-input focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200">
+                                <option value="">Selecione um horário</option>
+                                <option value="08:00">🕗 08:00 - Manhã</option>
+                                <option value="09:00">🕘 09:00 - Manhã</option>
+                                <option value="10:00">🕙 10:00 - Manhã</option>
+                                <option value="11:00">🕚 11:00 - Manhã</option>
+                                <option value="14:00">🕑 14:00 - Tarde</option>
+                                <option value="15:00">🕒 15:00 - Tarde</option>
+                                <option value="16:00">🕓 16:00 - Tarde</option>
+                                <option value="17:00">🕔 17:00 - Tarde</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Observações -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-edit text-yellow-500 mr-2"></i>Observações (opcional)
+                        </label>
+                        <textarea id="observacoes" 
+                                  rows="3" 
+                                  class="w-full px-4 py-3 border-2 border-yellow-200 rounded-xl form-input focus:border-yellow-400 focus:ring-2 focus:ring-yellow-200"
+                                  placeholder="Ex: Gostaria de unhas francesinhas, tenho alergia a algum produto..."></textarea>
+                    </div>
+
+                    <!-- Botão de Agendamento -->
+                    <div class="text-center pt-6">
+                        <button type="submit" 
+                                class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-bold px-12 py-4 rounded-2xl shadow-2xl hover:shadow-xl transition duration-300 transform hover:scale-105 text-lg w-full md:w-auto">
+                            <i class="fab fa-whatsapp mr-3"></i> Confirmar Agendamento via WhatsApp
+                        </button>
+                        <p class="text-sm text-gray-500 mt-3">
+                            ✅ Você será redirecionado para o WhatsApp para confirmação final
+                        </p>
+                    </div>
                 </form>
             </div>
         </div>
@@ -231,21 +340,41 @@
             
             <div class="border-t border-gray-700 pt-6">
                 <p class="text-gray-400">&copy; 2024 C Unhas - Nail Designer. Todos os direitos reservados.</p>
-                <p class="text-gray-400 text-sm mt-2">Desenvolvido com 💖 para realçar sua beleza</p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // Script simples para suavizar rolagem
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        // Sistema de Agendamento
+        document.getElementById('agendamentoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('nomeCliente').value;
+            const whatsapp = document.getElementById('whatsappCliente').value;
+            const servico = document.getElementById('servico').value;
+            const data = document.getElementById('dataAgendamento').value;
+            const horario = document.getElementById('horarioAgendamento').value;
+            const observacoes = document.getElementById('observacoes').value;
+            
+            const dataFormatada = new Date(data).toLocaleDateString('pt-BR');
+            
+            const mensagem = `📍 *NOVO AGENDAMENTO - Site C Unhas*%0A%0A` +
+                           `👤 *Cliente:* ${nome}%0A` +
+                           `📞 *WhatsApp:* ${whatsapp}%0A` +
+                           `💅 *Serviço:* ${servico}%0A` +
+                           `📅 *Data preferida:* ${dataFormatada}%0A` +
+                           `⏰ *Horário:* ${horario}%0A` +
+                           `📝 *Observações:* ${observacoes || 'Nenhuma'}%0A%0A` +
+                           `_Por favor, confirme a disponibilidade!_`;
+            
+            const urlWhatsApp = `https://wa.me/5588999981878?text=${mensagem}`;
+            window.open(urlWhatsApp, '_blank');
         });
+
+        // Configurar data mínima (hoje)
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('dataAgendamento').min = today;
     </script>
 </body>
 </html>
